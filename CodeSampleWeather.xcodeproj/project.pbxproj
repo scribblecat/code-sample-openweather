@@ -14,6 +14,8 @@
 		5AE892E92032360900A1EEA1 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5AE892E72032360900A1EEA1 /* LaunchScreen.storyboard */; };
 		5AE892F42032360900A1EEA1 /* CodeSampleWeatherTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5AE892F32032360900A1EEA1 /* CodeSampleWeatherTests.swift */; };
 		5AE892FF2032360900A1EEA1 /* CodeSampleWeatherUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5AE892FE2032360900A1EEA1 /* CodeSampleWeatherUITests.swift */; };
+		5AE893102032377100A1EEA1 /* Alamofire.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5AE8930F2032377100A1EEA1 /* Alamofire.framework */; };
+		5AE893112032377100A1EEA1 /* Alamofire.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 5AE8930F2032377100A1EEA1 /* Alamofire.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -33,6 +35,20 @@
 		};
 /* End PBXContainerItemProxy section */
 
+/* Begin PBXCopyFilesBuildPhase section */
+		5AE893122032377100A1EEA1 /* Embed Frameworks */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+				5AE893112032377100A1EEA1 /* Alamofire.framework in Embed Frameworks */,
+			);
+			name = "Embed Frameworks";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
 /* Begin PBXFileReference section */
 		5AE892DB2032360900A1EEA1 /* CodeSampleWeather.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CodeSampleWeather.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		5AE892DE2032360900A1EEA1 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -47,6 +63,7 @@
 		5AE892FA2032360900A1EEA1 /* CodeSampleWeatherUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = CodeSampleWeatherUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		5AE892FE2032360900A1EEA1 /* CodeSampleWeatherUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CodeSampleWeatherUITests.swift; sourceTree = "<group>"; };
 		5AE893002032360900A1EEA1 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		5AE8930F2032377100A1EEA1 /* Alamofire.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Alamofire.framework; path = Carthage/Build/iOS/Alamofire.framework; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -54,6 +71,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				5AE893102032377100A1EEA1 /* Alamofire.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -77,6 +95,7 @@
 		5AE892D22032360800A1EEA1 = {
 			isa = PBXGroup;
 			children = (
+				5AE8930F2032377100A1EEA1 /* Alamofire.framework */,
 				5AE892DD2032360900A1EEA1 /* CodeSampleWeather */,
 				5AE892F22032360900A1EEA1 /* CodeSampleWeatherTests */,
 				5AE892FD2032360900A1EEA1 /* CodeSampleWeatherUITests */,
@@ -135,6 +154,8 @@
 				5AE892D72032360900A1EEA1 /* Sources */,
 				5AE892D82032360900A1EEA1 /* Frameworks */,
 				5AE892D92032360900A1EEA1 /* Resources */,
+				5AE8930E2032370600A1EEA1 /* ShellScript */,
+				5AE893122032377100A1EEA1 /* Embed Frameworks */,
 			);
 			buildRules = (
 			);
@@ -253,6 +274,23 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		5AE8930E2032370600A1EEA1 /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"$(SRCROOT)/Carthage/Build/iOS/Alamofire.framework",
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "/usr/local/bin/carthage copy-frameworks";
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		5AE892D72032360900A1EEA1 /* Sources */ = {
@@ -428,6 +466,10 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = KXRTMMS4GE;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Carthage/Build/iOS",
+				);
 				INFOPLIST_FILE = CodeSampleWeather/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.sadiecontini.com.CodeSampleWeather;
@@ -443,6 +485,10 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = KXRTMMS4GE;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Carthage/Build/iOS",
+				);
 				INFOPLIST_FILE = CodeSampleWeather/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.sadiecontini.com.CodeSampleWeather;
