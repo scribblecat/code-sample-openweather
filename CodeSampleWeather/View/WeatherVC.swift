@@ -42,7 +42,7 @@ class WeatherVC: UIViewController {
     }
     
     func submitSearchForm() {
-        if let text = searchTextField.text,
+        if let text = searchTextField.text?.trim(),
             !text.isEmpty {
             if text.isNumber {
                 showErrorMessage("Make sure you enter a city name and not a zip code.")
@@ -137,5 +137,9 @@ extension WeatherVC: UITextFieldDelegate {
 extension String  {
     var isNumber: Bool {
         return !isEmpty && rangeOfCharacter(from: CharacterSet.decimalDigits.inverted) == nil
+    }
+    
+    func trim() -> String {
+        return self.trimmingCharacters(in: .whitespacesAndNewlines)
     }
 }
