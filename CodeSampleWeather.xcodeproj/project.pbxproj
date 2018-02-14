@@ -7,6 +7,13 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		5A28C73A2033DA9200173C0C /* Weather.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5AE8931620323E2400A1EEA1 /* Weather.swift */; };
+		5A28C73B2033DD3600173C0C /* WeatherTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A28C7372033D9AB00173C0C /* WeatherTest.swift */; };
+		5A28C73C2033DD7800173C0C /* DataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5AE8930C2032361700A1EEA1 /* DataManager.swift */; };
+		5A28C73D2033DD9900173C0C /* Alamofire.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5AE8930F2032377100A1EEA1 /* Alamofire.framework */; };
+		5A28C73E2033E29F00173C0C /* AppError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5AD98AF82032B8A50001AE4F /* AppError.swift */; };
+		5A28C73F2033E2D100173C0C /* Constant.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5AE8931320323A2A00A1EEA1 /* Constant.swift */; };
+		5A28C7402033E30900173C0C /* AlertController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5AD98AFA2032B99F0001AE4F /* AlertController.swift */; };
 		5AD98AF92032B8A50001AE4F /* AppError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5AD98AF82032B8A50001AE4F /* AppError.swift */; };
 		5AD98AFB2032B99F0001AE4F /* AlertController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5AD98AFA2032B99F0001AE4F /* AlertController.swift */; };
 		5AD98AFF2033C7CA0001AE4F /* UserDefaultsManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5AD98AFE2033C7CA0001AE4F /* UserDefaultsManager.swift */; };
@@ -56,6 +63,7 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		5A28C7372033D9AB00173C0C /* WeatherTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeatherTest.swift; sourceTree = "<group>"; };
 		5AD98AF82032B8A50001AE4F /* AppError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppError.swift; sourceTree = "<group>"; };
 		5AD98AFA2032B99F0001AE4F /* AlertController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlertController.swift; sourceTree = "<group>"; };
 		5AD98AFE2033C7CA0001AE4F /* UserDefaultsManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserDefaultsManager.swift; sourceTree = "<group>"; };
@@ -91,6 +99,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				5A28C73D2033DD9900173C0C /* Alamofire.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -182,6 +191,7 @@
 			children = (
 				5AE8930C2032361700A1EEA1 /* DataManager.swift */,
 				5AE8931620323E2400A1EEA1 /* Weather.swift */,
+				5A28C7372033D9AB00173C0C /* WeatherTest.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -354,7 +364,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				5A28C73A2033DA9200173C0C /* Weather.swift in Sources */,
+				5A28C73C2033DD7800173C0C /* DataManager.swift in Sources */,
+				5A28C73E2033E29F00173C0C /* AppError.swift in Sources */,
+				5A28C73B2033DD3600173C0C /* WeatherTest.swift in Sources */,
+				5A28C7402033E30900173C0C /* AlertController.swift in Sources */,
 				5AE892F42032360900A1EEA1 /* CodeSampleWeatherTests.swift in Sources */,
+				5A28C73F2033E2D100173C0C /* Constant.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -553,6 +569,10 @@
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = KXRTMMS4GE;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Carthage/Build/iOS",
+				);
 				INFOPLIST_FILE = CodeSampleWeatherTests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.sadiecontini.com.CodeSampleWeatherTests;
@@ -570,6 +590,10 @@
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = KXRTMMS4GE;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Carthage/Build/iOS",
+				);
 				INFOPLIST_FILE = CodeSampleWeatherTests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.sadiecontini.com.CodeSampleWeatherTests;
