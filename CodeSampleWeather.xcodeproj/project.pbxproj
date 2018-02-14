@@ -64,6 +64,7 @@
 
 /* Begin PBXFileReference section */
 		5A28C7372033D9AB00173C0C /* WeatherTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeatherTest.swift; sourceTree = "<group>"; };
+		5A28C7412033E73700173C0C /* README.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
 		5AD98AF82032B8A50001AE4F /* AppError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppError.swift; sourceTree = "<group>"; };
 		5AD98AFA2032B99F0001AE4F /* AlertController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlertController.swift; sourceTree = "<group>"; };
 		5AD98AFE2033C7CA0001AE4F /* UserDefaultsManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserDefaultsManager.swift; sourceTree = "<group>"; };
@@ -125,6 +126,7 @@
 		5AE892D22032360800A1EEA1 = {
 			isa = PBXGroup;
 			children = (
+				5A28C7412033E73700173C0C /* README.md */,
 				5AE8930F2032377100A1EEA1 /* Alamofire.framework */,
 				5AE892DD2032360900A1EEA1 /* CodeSampleWeather */,
 				5AE892F22032360900A1EEA1 /* CodeSampleWeatherTests */,
